@@ -119,23 +119,21 @@ public class BinaryTest
         assertTrue( binary3.getValue().equals("0"));
     }
 
-    /*Unit testing for the AND function*/
-
-    @org.junit.Test
+    @Test
     public void test_and_v1() {
         Binary a = new Binary("1");
         Binary b = new Binary("0");
         org.junit.Assert.assertEquals("0", Binary.and(a, b).getValue());
     }
 
-    @org.junit.Test
+    @Test
     public void test_and_v2() {
         Binary a = new Binary("1111");
         Binary b = new Binary("1111");
         org.junit.Assert.assertEquals("1111", Binary.and(a, b).getValue());
     }
 
-    @org.junit.Test
+    @Test
     public void test_and_v3() {
         Binary a = new Binary("101");
         Binary b = new Binary("11"); // treated as 011
@@ -143,42 +141,42 @@ public class BinaryTest
     }
 
     /*Unit testing for the OR function*/
-    @org.junit.Test
+    @Test
     public void test_or_v1() {
         Binary a = new Binary("0");
         Binary b = new Binary("0");
         org.junit.Assert.assertEquals("0", Binary.or(a, b).getValue());
     }
 
-    @org.junit.Test
+    @Test
     public void test_or_v2() {
         Binary a = new Binary("0");
         Binary b = new Binary("1");
         org.junit.Assert.assertEquals("1", Binary.or(a, b).getValue());
     }
 
-    @org.junit.Test
+    @Test
     public void test_or_v3() {
         Binary a = new Binary("101");
         Binary b = new Binary("11"); // treated as 011
         org.junit.Assert.assertEquals("111", Binary.or(a, b).getValue());
     }
     /*testing for multiplication*/
-    @org.junit.Test
+    @Test
     public void test_multi_v1() {
         Binary a = new Binary("10101");
         Binary b = new Binary("0");
         org.junit.Assert.assertEquals("0", Binary.multiply(a, b).getValue());
     }
 
-    @org.junit.Test
+    @Test
     public void test_multi_v2() {
         Binary a = new Binary("1101");
         Binary b = new Binary("1");
         org.junit.Assert.assertEquals("1101", Binary.multiply(a, b).getValue());
     }
 
-    @org.junit.Test
+    @Test
     public void test_multi_v3() {
         Binary a = new Binary("101");  // 5
         Binary b = new Binary("11");   // 3
